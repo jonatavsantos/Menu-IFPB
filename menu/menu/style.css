@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000000
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #b7e1e5;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 10%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ifpb {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.ifpb img {
+    height: 60px;
+    width: 60px;
+}
+
+.ifpb h1 {
+    font-size: 1.5em;
+}
+
+.menu {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: #444;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    height: auto;
+}
+
+button {
+    width: 90px;
+    height: 35px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007b83;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #005f61;
+    transform: scale(1.05);
+}
+
+#buttonday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #b7e1e5;
+    color: #000000;
+    text-align: center;
+    padding: 15px 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+
+    .logo img {
+        max-width: 30%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu {
+        margin-top: 20%;
+    }
+
+    .days {
+        flex-direction: column;
+    }
+
+    .ifpb h1 {
+        font-size: 1em;
+    }
+}
