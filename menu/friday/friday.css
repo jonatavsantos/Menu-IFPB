@@ -3,55 +3,128 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
 }
 
 .header {
-    width: 100%;
-    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #b7e1e5;
+    color: #ffffff;
 }
 
 .ifpb {
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    background-image: url(../assets/imgs/header.png);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.ifpb img {
+    height: 100px;
+    width: auto;
+}
+
+.ifpb h1 {
+    font-size: 1.5em;
 }
 
 .menu {
-    margin-top: 2%;
+    margin-top: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 table {
-    width: 50%;
-    margin: 20px auto;
+    width: 80%; 
+    margin: 30px auto;
     border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     overflow: hidden;
+    background-color: #ffffff; 
+    transition: transform 0.3s ease;
+    table-layout: fixed;
 }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+table:hover {
+    transform: scale(1.03); 
 }
+
 
 th {
-    background-color: #e6e3e3;
+    background-color: #007B8D;
+    color: #fff; 
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 25%;
+}
+
+
+td {
+    border: 1px solid #ddd; 
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    color: #333; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 25%;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; 
 }
 
 tr:hover td {
-    background-color: #e0e0e0;
-    transform: scale(1.02);
+    background-color: #e0e0e0; 
+    transform: scale(1.01);  
+}
+
+td, th {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
 }
 
 h1 {
     text-align: center;
     color: #333;
+}
+
+#arrow-left,
+#arrow-right {
+    font-size: .1em;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s;
+    padding: 10px; 
+    border-radius: 30%;  
+    background-color: #f4f4f4; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#arrow-left:hover,
+#arrow-right:hover {
+    color: #007B8D;
+    transform: scale(1.2); 
+    background-color: #e0e0e0; 
 }
 
 #arrow-left {
@@ -65,24 +138,42 @@ h1 {
 .back {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 7%;
 }
 
+
 #buttonback {
-    width: 70px;
-    height: 20px;
+    width: 100px;
+    height: 35px; 
     background: none;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border: 2px solid #007B8D;  
+    color: #007B8D; 
+    font-size: 1.1em; 
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 5px 15px;
+}
+
+#buttonback:hover {
+    background-color: #007B8D;
+    color: #fff;
 }
 
 footer {
-    background-color:#adf7ff; 
-    color: #000000; 
-    text-align: center; 
-    padding: 25px;  
-    margin-top: 25px;
+    background-color: #b7e1e5;
+    color: #000000;
+    text-align: center;
+    padding: 15px 25px;
     bottom: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 a {
@@ -92,8 +183,12 @@ a {
 }
 
 @media (max-width: 600px) {
+    table {
+        width: 90%;
+    }
+
     th, td {
-        padding: 8px;
+        padding: 10px;
         font-size: 14px;
     }
 
@@ -102,8 +197,8 @@ a {
     }
 
     #if {
-        width: 60%;
-        height: 60%;
+        width: 30%;
+        height: 30%;
     }
 
     #logo {
@@ -111,8 +206,19 @@ a {
         height: 30%;
     }
 
+    #arrow-left,
+    #arrow-right {
+        font-size: 1.8em;
+        padding: 8px;
+    }
+
     #buttonback {
-        width: 40px;
-        height: 20px;
+        width: 90px; 
+        height: 30px; 
+        font-size: 1em; 
+    }
+
+    .ifpb h1 {
+        font-size: 1em;
     }
 }
